@@ -209,7 +209,7 @@ describe('Central de Atendimento ao Cliente TAT', function() {
           .should('not.be.visible')
       })
 
-      it.only('preenche a area de texto usando o comando invoke', function(){
+      it('preenche a area de texto usando o comando invoke', function(){
         const longText = Cypress._.repeat('0123456789', 20)
 
         cy.get('#open-text-area')
@@ -227,11 +227,11 @@ describe('Central de Atendimento ao Cliente TAT', function() {
         })
       })
 
-      it.only('encontra o gato escondido', function(){
+      it('encontra o gato escondido', function(){
         cy.get('#cat')
         .invoke('show')
         .should('be.visible')
-        cy.get('#tittle')
+        cy.get('#title')
         .invoke('text', 'CAT TAT')
         
       })
